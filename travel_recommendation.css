@@ -54,21 +54,37 @@ body {
 #backimage{
     background-size: cover;
 }
-#intro{
+.introduction{
     color: white;
-    /* padding: 20px 20px; */
-    width: 20px;
     font-size: xx-large;
     margin-left: 15%;
-    margin-top: 15%;
-    height: 180px;
 }
-#introdesc{
+.description{
     color: white;
     margin-left: 15%;
     font-size: large;
     height: 80px; 
-    width: 370px; 
+    text-align: justify;  
+}
+#intro, #contact-us{
+    margin-top: 15%;
+    height: 180px;
+}
+#intro{
+    width: 20px;
+}
+#introdesc{
+    width: 370px;
+}
+#about-us{
+    width: 290px;
+    height: 70px;
+}
+#aboutdesc{ 
+    width: 75%; 
+}
+#contact-us{
+    width: 22%;
 }
 #book{
     padding: 8px 16px;

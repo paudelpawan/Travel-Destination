@@ -39,16 +39,16 @@ body {
     padding: 8px;
     flex-grow: 1;
 }
-#navbar button {
+#navbar button, #contactform button {
     padding: 8px 16px;
     border: none;
-    border-radius: 4px;
-    background-color: white;
+    border-radius: 10px;
+    background-color: blueviolet;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#navbar button:hover {
+#navbar button:hover, #contactform button:hover {
     background-color: #ccc;
 }
 #backimage{
@@ -58,6 +58,7 @@ body {
     color: white;
     font-size: xx-large;
     margin-left: 15%;
+    color: rgba(255, 255, 255, 0.8);
 }
 .description{
     color: white;
@@ -81,7 +82,7 @@ body {
     height: 70px;
 }
 #aboutdesc{ 
-    width: 75%; 
+    width: 75%;
 }
 #contact-us{
     width: 22%;
@@ -101,11 +102,107 @@ body {
 }
 .social-icons {
     display: flex;
-    justify-content: center;
+    position: fixed;
+    flex-direction: column;
+    top: 50%;
+    left: 1%;
+}
+.social-icons a{
+    margin: 10px 0;
+}
+.social-icon {
+    width: 45px; 
+    height: 45px;
+}
+.social-icon:hover {
+    transform: scale(1.2);
+}
+#contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#contact-us{
+    flex: 0.8;
+    margin-right: 20px;
+}
+#contactform{
+    color: white;
+    flex: 1;
+    margin-right: 10%;
+    margin-top: 10%;   
+}
+#contactform form {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.8);
+}
+#contactform input[type="text"],
+#contactform input[type="email"], #contactform textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: medium;
+}
+#contactform input[type="text"],
+#contactform input[type="email"]{
+    height: 40px;
+}
+#contactform textarea {
+    height: 120px;
+}
+#our-team {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* padding: 15px; */
+}
+.position {
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    margin: 10px;  
+}
+.position:hover {
+    background-color: green;
+}
+#member-1 img, #member-2 img, #member-3 img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+#members{
+    color: white;
+    margin-left: 5%;
+    color: rgba(252, 249, 249, 0.9);
+    flex: 1;
+    margin-right: 10%;
+}
+#our-team, #members{
+    margin-top: 10%;
+}
+#our-team-container, #members{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#member-1, #member-2, #member-3{
+    background-color:rgba(252, 249, 249, 0.2);
+    margin: 5px;
+    border-radius: 20px;
+    width: 35%;
+    text-align: center;
+    padding: 5px;
+}
+#member-1:hover, #member-2:hover, #member-3:hover{
+    background-color: black;
+    cursor: pointer;
 }
 
-.social-icon {
-    width: 40px; 
-    height: auto;
-    margin: 0 10px; 
-}
+
+
+

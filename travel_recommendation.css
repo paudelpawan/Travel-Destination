@@ -1,26 +1,47 @@
 body {
     font-family: Arial, sans-serif;
 }
-#navbar{
-    align-items: center;
+#navbar {
     display: flex;
-    background-color: black; 
-    /* padding-right: 10px;   */
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
 }
-#navbar a{
-                margin-right: 50px;
-                text-decoration: none;
-                color: white;
-                padding: 8px 26px;
-                border-radius: 4px;
-                transition: background-color 0.3s;
-                padding-right: 10px;
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+#navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    padding: 8px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 #navbar input[type="text"] {
     margin-right: 10px;
-    /* padding: 8px; */
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding-right: 10px;
-    flex-grow: 0.1;
+    padding: 8px;
+    flex-grow: 1;
+}
+#navbar button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#navbar button:hover {
+    background-color: #ccc;
 }

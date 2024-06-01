@@ -13,15 +13,32 @@ body {
     align-items: center;
     background-color: black;
     padding: 10px 20px;
+    height: 20px; 
 }
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex: 1;
+}
+#nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    align-items: center;
+    padding: 8px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 .nav-search {
     display: flex;
     align-items: center;
+}
+#searchkey {
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
 }
 #navbar a {
     margin: 0 15px;
@@ -49,7 +66,7 @@ body {
 }
 
 #navbar button:hover, #contactform button:hover {
-    background-color: #ccc;
+    background-color: green;
 }
 #backimage{
     background-size: cover;
@@ -97,7 +114,7 @@ body {
     margin-left: 15%;
 }
 #book:hover{
-    background-color: #ccc; 
+    background-color: green; 
     
 }
 .social-icons {

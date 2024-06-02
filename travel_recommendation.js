@@ -1,5 +1,6 @@
 const search= document.getElementById("search");
 const reset= document.getElementById("reset");
+const searchkey= document.getElementById("searchkey");
 function getRandomItems(arr, num) {
     const shuffled = arr.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, num);
@@ -52,4 +53,9 @@ search.addEventListener('click', searchCondition);
 reset.addEventListener('click', () => {
     document.getElementById("searchkey").value = "";
     document.getElementById("result").innerHTML = "";
+});
+searchkey.addEventListener('keydown', (event) => {
+    if (event.key == 'Enter') {
+        searchCondition();
+    }
 });

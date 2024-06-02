@@ -1,5 +1,9 @@
 const search= document.getElementById("search");
 const reset= document.getElementById("reset");
+function getRandomItems(arr, num) {
+    const shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+}
 function searchCondition(){
     const keyword= document.getElementById("searchkey").value.toLowerCase();
     const result= document.getElementById("result");
@@ -19,12 +23,16 @@ fetch('travel_recommendation_api.json')
         });
     }
     if (recommendations.length > 0) {
-        recommendations.forEach(item => {
+        const selectedCities = getRandomItems(recommendations, 2);
+        selectedCities.forEach(item => {
+            const options = { timeZone: item.timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            const localTime = new Date().toLocaleTimeString('en-US', options);
             result.innerHTML += `
                 <div class="city-info">
                     <img src="${item.imageUrl}" alt="${item.name}" class="img-style"><br/>
                     <strong>${item.name}</strong>
                     <p>${item.description}</p>
+                    <p>Current local time: ${localTime}</p>
                     <div class="position">Visit</div>
                 </div>
                 
